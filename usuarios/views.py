@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.messages import constants
 from django.contrib import auth
 
+
 def cadastro(request):
     if request.method == "GET":
         
@@ -42,7 +43,7 @@ def cadastro(request):
 def logar(request):
     if request.method == "GET":
         return render(request, 'logar.html')
-    
+        
     elif request.method == "POST":
         username = request.POST.get('username')
         senha = request.POST.get('senha')

@@ -1,15 +1,31 @@
 <nav class="navbar navbar-expand-lg navbar-dark dark-color">
     <div class="container-fluid">
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-	            <a class="nav-link active" aria-current="page" href="">Marketplace</a>
-            </li>
-            <li class="nav-item">
-	            <a class="nav-link active" href="{% url 'cadastrar_empresa' %}">Quero captar</a>
-            </li>
+      <a class="navbar-brand" href="{% url 'index' %}">Start.se</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Empresários</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="{% url 'cadastrar_empresa' %}">Cadastrar Empresas</a></li>
+              <li><a class="dropdown-item" href="{% url 'listar_empresas' %}">Listar Empresas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Investidores</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="{% url 'sugestao' %}">Sugestão de Invesimentos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cadastros</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="{% url 'cadastro' %}">Cadastrar Usuário</a></li>
+            </ul>
+          </li>
         </ul>
-        </div>
+      </div>
     </div>
-</nav>
-	  
+  </nav>
