@@ -114,7 +114,10 @@ def assinar_contrato(request, id):
         pi.rg = rg
         pi.status = 'PE'
         pi.save()
+        
 
         messages.add_message(request, constants.SUCCESS, f'Contrato assinado com sucesso, sua proposta foi enviada a empresa.')
         return redirect(f'/investidores/ver_empresa/{pi.empresa.id}')
+
+
 
